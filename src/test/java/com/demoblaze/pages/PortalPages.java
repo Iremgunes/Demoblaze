@@ -58,7 +58,11 @@ public class PortalPages extends LoginPage{
     @FindBy(xpath = "//span[@class='user-profile-img-default user-default-avatar']")
     public WebElement profilePicture;
 
+    @FindBy(xpath = "//div[@title='Add to favorites']")
+    public WebElement starIconBeforeClick;
 
+    @FindBy(xpath = "//div[@title='Remove from favorites']")
+    public WebElement starIconAfterClick;
 
 
 

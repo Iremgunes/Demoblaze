@@ -58,6 +58,11 @@ Feature: Interact on posts feature
       When user clicks the reviewer's name
       Then user should see reviewer's profile
 
+  @AC06
+  Scenario: As a user, user should be able to add others' posts to favorites by clicking on the Star icon.
+    Given user is on the marketing portal page
+    When user clicks the star icon
+    Then star icon's color should change to yellow
 
 
 

@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/demoblaze/step_definitions",
         dryRun = false,
-        tags = "@AC05",
+        tags = "@AC06",
         publish = true
 
 )

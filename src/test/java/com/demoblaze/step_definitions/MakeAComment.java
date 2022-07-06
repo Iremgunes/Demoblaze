@@ -134,6 +134,20 @@ public class MakeAComment {
         Assert.assertTrue(portalPages.profilePicture.isDisplayed());
     }
 
+    @When("user clicks the star icon")
+    public void user_clicks_the_star_icon() {
+        portalPages.starIconBeforeClick.click();
+            BrowserUtils.sleep(2);
+    }
+    @Then("star icon's color should change to yellow")
+    public void star_icon_s_color_should_change_to_yellow() {
+        Assert.assertTrue(portalPages.starIconAfterClick.isDisplayed());
+
+        BrowserUtils.sleep(2);
+        portalPages.starIconAfterClick.click();
+    }
+
+
 
 
 
