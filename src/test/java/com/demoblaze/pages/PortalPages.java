@@ -28,6 +28,9 @@ public class PortalPages extends LoginPage{
     @FindBy(xpath = "//*[starts-with(@id, 'record-BLOG_')]/div[.='hello world']")
     public WebElement messageText;
 
+    @FindBy(xpath = "//*[starts-with(@id, 'record-BLOG_')]/div[.='hello again']")
+    public WebElement messageText2;
+
     @FindBy(xpath = "(//span[@class='bx-ilike-left-wrap'])[1]")
     public WebElement likeButton;
 

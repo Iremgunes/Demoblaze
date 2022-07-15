@@ -50,6 +50,17 @@ public class MakeAComment {
     public void user_should_see_the_own_comment_on_the_page() {
         Assert.assertEquals("hello world", portalPages.messageText.getText());
     }
+    @When("user writes the another comment in the comment box")
+    public void user_writes_the_another_comment_in_the_comment_box() {
+        Driver.getDriver().switchTo().frame(Driver.getDriver().findElement(By.xpath("//iframe[@class='bx-editor-iframe']")));
+        portalPages.commentBoxAfterExtend.sendKeys("hello again");
+        BrowserUtils.sleep(2);
+        Driver.getDriver().switchTo().parentFrame();
+    }
+    @Then("user should see the own another comment on the page")
+    public void user_should_see_the_own_another_comment_on_the_page() {
+        Assert.assertEquals("hello again", portalPages.messageText2.getText());
+    }
 
     @When("user clicks to like button")
     public void user_clicks_to_like_button() {
